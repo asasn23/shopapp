@@ -6,7 +6,7 @@ const ProductHeader = props => {
     <header>
       <h2 className={styles.name}>{props.title}</h2>
       <span className={styles.price}>
-        Price: {props.getPrice(props.basePrice, props.currentSize)}$
+        Price: {props.totalPrice}$
       </span>
     </header>
   );
@@ -15,7 +15,7 @@ const ProductHeader = props => {
 ProductHeader.propTypes = {
   basePrice: PropTypes.number.isRequired,
   currentSize: PropTypes.object.isRequired,
-  getPrice: PropTypes.func.isRequired,
+  totalPrice: PropTypes.number.isRequired,
 };
 
 export default ProductHeader;
